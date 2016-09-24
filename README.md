@@ -1,0 +1,1 @@
+Just a little static site for something
