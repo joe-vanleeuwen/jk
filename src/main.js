@@ -7,4 +7,23 @@ var countdown = function () {
   return Math.ceil(tillThen)
 }
 
-document.getElementById("countdown").innerHTML = countdown()
+var updateCountDown = function () {
+  document.getElementById("countdown").innerHTML = countdown()
+}
+
+var monitorCountDown = function () {
+  var date = new Date()
+  var midnight = (new Date(
+    date.getFullYear(),
+    date.getMonth(),
+    date.getDate() + 1
+  ))
+  var timeTill = midnight.getTime() - date.getTime()
+  setTimeout(function () {
+    updateCountDown()
+    monitorCountDown()
+  }, Math.min(timeTill, 3600000)) // an hour
+}
+
+updateCountDown()
+monitorCountDown()
