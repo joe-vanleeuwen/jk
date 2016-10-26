@@ -2,26 +2,68 @@ body {
   margin: 0;
 }
 
+body * {
+  box-sizing: border-box;
+}
+
+/*.minion-pro {
+  font-family: minion-pro, serif;
+}
+
+.adorn-smooth-pomander {
+  font-family: adorn-smooth-pomander, sans-serif;
+}*/
+
 .main-container {
   text-align: center;
   padding: 15px;
-  padding-top: 100px;
+  /*padding-top: 100px;*/
   padding-bottom: 100px;
   font-family: 'Gloria Hallelujah', cursive;
 }
 
 p {
   font-size: 20px;
-  color: #7d7d7d;
+  /*color: #7d7d7d;*/
+  color: #005098;
 }
 
 #countdown {
   font-size: 200px;
-  color: #E91E63;
-  /*color: #339;  Saphire? */ 
+  /*color: #E91E63;*/
+  color: rgb(224,234,243);
 }
 
 img {
   width: 100%;
   max-width: 600px;
 }
+
+.rotate {
+  transform: rotate(-8deg);
+}
+
+.kj {
+  font-size: 60px;
+  font-family: adorn-smooth-pomander, sans-serif;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  position: relative;
+  pointer-events: none;
+}
+
+.kj h1 {
+  color: #005098;
+  position: relative;
+  z-index: 10;
+}
+
+.kj span {
+  font-size: 380px;
+  color: #e0eaf3;
+  position: absolute;
+  top: -100px;
+}
+
+.kj .spacer {}

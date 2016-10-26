@@ -41,3 +41,17 @@ var monitorCountDown = function () {
 
 updateCountDown()
 monitorCountDown()
+
+
+// $.ajax({
+//   url: 'https://sheetsu.com/apis/v1.0/0323662044dd',
+//   data: data,
+//   dataType: 'json',
+//   type: 'POST',
+//   success: function(data) {
+//     console.log("succeeded");
+//   },
+//   error: function(data) {
+//     console.log("error: ", data);
+//   }
+// });
