@@ -1,22 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <script src="https://use.typekit.net/agg0jxt.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>JK</title>
   <link rel="stylesheet" type="text/css" href="./src/styles.css">
   <link rel="stylesheet" type="text/css" href="./src/form.css">
+  <link rel="stylesheet" type="text/css" href="./src/prefixed.css">
   <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
-
 </head>
 <body>
   <div class="main-container">
 
+  <div class="kj-container">
+    <span>&</span>
     <div class="kj rotate">
       <h1>Karisha</h1>
-      <span>&</span>
       <div class="spacer"></div>
       <h1>Joseph</h1>
     </div>
+  </div>
 
 <!--     <p>We're counting down</p>
     <div id="countdown"></div>
@@ -42,38 +46,26 @@
       </div>
 
       <div class="input-wrapper">
-        <input id="name" type="text" name="name" autocomplete="off" autocomplete="nope" required>
+        <input id="guest-name" type="text" name="name" autocomplete="off" autocomplete="nope" required>
         <label for="name">Guest</label>
       </div>
 
-<!--       <div class="inputs-wrapper">
-        <div class="input-wrapper">
-          <input id="accepts" type="text" name="accepts" autocomplete="off" autocomplete="nope" required>
-          <label for="accepts">Accepts</label>
+      <div class="switch-wrapper">
+        <span>Accepts with pleasure</span>
+        <div>
+          <label class="switch">
+            <input id="attending" type="checkbox" checked>
+            <div class="slider"></div>
+          </label>
         </div>
-        <div class="input-wrapper">
-          <input id="regrets" type="text" name="regrets" autocomplete="off" autocomplete="nope" required>
-          <label for="regrets">Regrets</label>
-        </div>
-      </div> -->
-
-      <div class="inputs-wrapper">
-        <div class="input-wrapper">
-          <input type="checkbox" name="accepts">
-          <label>Accepts with pleasure</label>
-        </div>
-        <div class="input-wrapper">
-          <input type="checkbox" name="accepts">
-          <label>Regretfully declines</label>
-        </div>
+        <span>Regretfully declines</span>
       </div>
 
-      <button type="submit" disabled>Respond</button>
+      <button type="submit">Respond</button>
     </form>
   </div>
-  <script src="https://use.typekit.net/agg0jxt.js"></script>
-  <script>try{Typekit.load({ async: true });}catch(e){}</script>
   <script src="./src/vendor/jquery-3.1.1.min.js"></script>
   <script src="./src/main.js"></script>
+  <script src="./src/form.js"></script>
 </body>
 </html>

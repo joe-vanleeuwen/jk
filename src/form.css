@@ -18,12 +18,24 @@ button {
   border: none;
   border-radius: 10px;
   color: #fff;
+  padding: 12px 18px;
+  font-size: 23px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  opacity: .8;
+  margin-top: 60px;
+  font-family: helvetica;
+/*  background: #005098;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
   padding: 5px 10px;
   font-size: 25px;
   letter-spacing: 4px;
   font-style: italic;
   cursor: pointer;
   opacity: .8;
+  margin-top: 60px;*/
 }
 
 button:hover:enabled {
@@ -41,7 +53,7 @@ button:hover:enabled {
 
 .input-wrapper input[type="text"]:focus {
   outline: none;
-  border-bottom: 1px solid #222;
+  border-bottom: 1px solid #005098;
 }
 
 .input-wrapper input[type="text"] + label {
@@ -58,6 +70,7 @@ button:hover:enabled {
   top: -14px;
   left: 0px;
   font-size: .8em;
+  color: #005098;;
 }
 
 .input-wrapper input[type="checkbox"] {
@@ -84,3 +97,77 @@ button:hover:enabled {
 .input-wrapper {
   margin-bottom: 20px;
 }
+
+/* toggle */
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  min-width: 50px;
+  height: 28px;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #005098;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+.switch input:not(:checked) + .slider {
+  background-color: #ccc;
+}
+
+.switch input:focus + .slider {
+  box-shadow: 0 0 1px #ccc;
+}
+
+.switch input:not(:checked) + .slider:before {
+  -webkit-transform: translateX(20px);
+  -ms-transform: translateX(20px);
+  transform: translateX(20px);
+}
+
+.switch-wrapper {
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.switch-wrapper span:first-child {
+  margin-right: 10px;
+}
+
+.switch-wrapper span:last-child {
+  margin-left: 10px;
+}
+
+.switch-wrapper > div {
+  align-self: center;
+}
+
+
+
+
+
