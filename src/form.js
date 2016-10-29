@@ -15,6 +15,7 @@ $(document).ready(function () {
       type: 'POST',
       success: function(data) {
         console.log("succeeded");
+        $("#success").show()
       },
       error: function(data) {
         console.log("error: ", data);
