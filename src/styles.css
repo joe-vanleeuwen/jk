@@ -12,7 +12,7 @@ body * {
 .wf-loading {
 /* styles to use when web fonts are loading */
 }
-.wf-loading .kj {
+.wf-loading .kj-container {
   opacity: 0;
 }
  

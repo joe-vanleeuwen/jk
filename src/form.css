@@ -43,10 +43,12 @@ button:hover:enabled {
 }
 
 .input-wrapper input[type="text"] {
+  display: block;
   width: 100%;
   height: 100%;
   border: none;
-  border-bottom: 1px dotted #888;
+  /*border-bottom: 1px dotted #888;*/
+  border-bottom: 1px solid #888;
   transition: border-color .3s;
   -webkit-transition: border-color .3s;
 }
@@ -60,8 +62,8 @@ button:hover:enabled {
   position: absolute;
   left: 5px;
   top: 0;
-  transition: top .3s, left .3s, font-size .3s;
-  -webkit-transition: top .3s, left .3s, font-size .3s;
+  transition: top .3s, left .3s, font-size .3s, color .3s;
+  -webkit-transition: top .3s, left .3s, font-size .3s, color .3s;
 }
 
 .input-wrapper input[type="text"]:focus + label,
@@ -70,7 +72,11 @@ button:hover:enabled {
   top: -14px;
   left: 0px;
   font-size: .8em;
-  color: #005098;;
+  color: #005098;
+}
+
+.input-wrapper.optional label:after {
+  content: " (optional)";
 }
 
 .input-wrapper input[type="checkbox"] {
@@ -82,6 +88,14 @@ button:hover:enabled {
 .input-wrapper {
   position: relative;
   height: 35px;
+  margin-bottom: 20px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 400px) {
+  .input-wrapper { flex-direction: column; }
 }
 
 .inputs-wrapper {
@@ -91,11 +105,10 @@ button:hover:enabled {
 .inputs-wrapper .input-wrapper {
   flex-grow: 1;
   display: flex;
-  align-items: center;
 }
 
-.input-wrapper {
-  margin-bottom: 20px;
+.input-wrapper > div {
+  display: inline-block;
 }
 
 /* toggle */
@@ -167,7 +180,15 @@ button:hover:enabled {
   align-self: center;
 }
 
-
-
-
+.errors > span {
+  width: 100%;
+  display: block;
+  text-align: center;
+  border: 2px solid #920000;
+  background: #f9b0b0;
+  color: #920000;
+  border-radius: 10px;
+  padding: 5px;
+  margin: 20px 0;
+}
 

@@ -5,9 +5,9 @@
   <script>try{Typekit.load({ async: true });}catch(e){}</script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>JK</title>
+  <link rel="stylesheet" type="text/css" href="./src/prefixed.css">
   <link rel="stylesheet" type="text/css" href="./src/styles.css">
   <link rel="stylesheet" type="text/css" href="./src/form.css">
-  <link rel="stylesheet" type="text/css" href="./src/prefixed.css">
   <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
 </head>
 <body>
@@ -29,28 +29,20 @@
 
 
     <form>
-<!--       <div class="inputs-wrapper">
-        <div class="input-wrapper">
-          <input id="firstname" type="text" name="firstname" autocomplete="off" autocomplete="nope" required>
-          <label for="firstname">First Name</label>
-        </div>
-        <div class="input-wrapper">
-          <input id="lastname" type="text" name="lastname" autocomplete="off" autocomplete="nope" required>
-          <label for="lastname">Last Name</label>
-        </div>
-      </div> -->
+      <div class="errors"></div>
+
 
       <div class="input-wrapper">
         <input id="name" type="text" name="name" autocomplete="off" autocomplete="nope" required>
         <label for="name">Name</label>
       </div>
 
-      <div class="input-wrapper">
+      <div class="input-wrapper optional">
         <input id="guest-name" type="text" name="name" autocomplete="off" autocomplete="nope" required>
-        <label for="name">Guest</label>
+        <label for="guest-name">Guest Name</label>
       </div>
 
-      <div class="switch-wrapper">
+<!--       <div class="switch-wrapper">
         <span>Accepts with pleasure</span>
         <div>
           <label class="switch">
@@ -59,11 +51,22 @@
           </label>
         </div>
         <span>Regretfully declines</span>
+      </div> -->
+
+      <div class="input-wrapper">
+        <div>
+          <input id="attending" name="attending" type="radio" value="yes" checked>
+          <label for="attending">Accepts with pleasure</label>
+        </div>
+        <div>
+          <input id="not-attending" name="attending" type="radio" value="no">
+          <label for="not-attending">Regretfully declines</label>
+        </div>
       </div>
 
       <button type="submit">Respond</button>
     </form>
-    <div id="success">Thank you! (a better success message coming soon :))</div>
+    <div id="success">Thank you for responding! :)</div>
   </div>
   <script src="./src/vendor/jquery-3.1.1.min.js"></script>
   <script src="./src/main.js"></script>
