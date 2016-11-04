@@ -2,7 +2,7 @@ body {
   margin: 0;
   font-size: 100%;
   /*background: #e0eaf3;*/
-  background: url(/src/assets/jk-photo.jpg) no-repeat center 20% fixed;
+  background: url("./assets/jk-photo.jpg") no-repeat center 20% fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
