@@ -5,7 +5,7 @@ var hasLength = function (field, val) {
 }
 
 var onlyLetters = function (field, val) {
-  if (!/^[a-zA-Z]*$/g.test(val)) {
+  if (!/^[a-zA-Z\s]*$/g.test(val)) {
     return "Please only use letters for the "+field+" :)"
   }
 }
@@ -33,7 +33,8 @@ $(document).ready(function () {
     var data = {
       name: $("#name").val(),
       guest: $("#guest-name").val(),
-      attending: $("input[name=attending]:checked").val() ? "yes" : "no"
+      attending: $("input[name=attending]:checked").val() ? "yes" : "no",
+      respond_date: new Date()
     }
 
     var errors = []
