@@ -1,7 +1,194 @@
-form {
+body {
+  margin: 0;
+  font-size: 100%;
+  /*background: #e0eaf3;*/
+  background: url(/src/assets/jk-photo.jpg) no-repeat center 20% fixed;
+  background-size: cover;
+}
+
+body * {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  font-weight: normal;
+}
+
+.wf-loading {
+/* styles to use when web fonts are loading */
+}
+.wf-loading .kj-container {
+  opacity: 0;
+}
+ 
+.wf-active {
+/* styles to use when web fonts are active */
+}
+ 
+.wf-inactive {
+/* styles to use when web fonts are inactive */
+}
+
+/*.minion-pro {
   font-family: minion-pro, serif;
+}
+
+.adorn-smooth-pomander {
+  font-family: adorn-smooth-pomander, sans-serif;
+}*/
+
+.main-container {
+  text-align: center;
+  padding: 15px;
+  /*padding-top: 100px;*/
+  /*padding-bottom: 100px;*/
+  font-family: 'Gloria Hallelujah', cursive;
+  background: #e0eaf3;
+  opacity: .9;
+}
+
+.container {
   max-width: 500px;
   margin: 0 auto;
+}
+
+p {
+  font-size: 20px;
+  /*color: #7d7d7d;*/
+  color: #005098;
+}
+
+#countdown {
+  font-size: 200px;
+  /*color: #E91E63;*/
+  color: rgb(224,234,243);
+}
+
+img {
+  width: 100%;
+  max-width: 600px;
+}
+
+.rotate {
+  -webkit-transform: rotate(-8deg);
+          transform: rotate(-8deg);
+}
+
+.kj-container {
+  font-size: 4em;
+  position: relative;
+  pointer-events: none;
+}
+
+.kj {
+  font-family: adorn-smooth-pomander, sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  pointer-events: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .kj-container { font-size: 2.4em; }
+}
+
+.kj h1 {
+  color: #005098;
+  position: relative;
+  z-index: 10;
+}
+
+.kj-container span {
+  font-family: adorn-smooth-pomander, sans-serif;
+  /*color: #e0eaf3;*/
+  color: #fff;
+  position: absolute;
+  font-size: 6.4em;
+  top: -.29em;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+}
+
+.kj .spacer {}
+
+#success {
+  display: none;
+}
+
+.registry {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.registry ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.registry ul li {
+  width: 150px;
+}
+
+.registry ul li.amazon {
+  max-width: 150px;
+  width: initial;
+}
+
+@media only screen and (max-width: 400px) {
+/*  .registry ul li {
+    min-width: 150px;
+  }*/
+  .registry ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .registry ul li {
+    margin: 10px 0;
+  }
+}
+
+.amazon {
+  float: left;
+  text-indent: -500px;
+  background-position: -10px -51px;
+  width: 97px;
+  height: 29px;
+  background-image: url(https://images-na.ssl-images-amazon.com/images/G/01/gno/sprites/global-sprite_bluebeacon-32-v1._CB295592523_.png);
+  background-repeat: repeat-x;
+}
+
+.under-construction {
+  /*margin-top: 50px;*/
+}
+.under-construction p {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+
+form {
+  font-family: minion-pro, serif;
 }
 
 label {
@@ -13,40 +200,38 @@ input, button {
   font-family: minion-pro, serif;
 }
 
+input {
+  background: transparent;
+}
+
 button {
-  background: #005098;
-  border: none;
   border-radius: 10px;
-  color: #fff;
-  padding: 12px 18px;
+  padding: 0px 25px;
   font-size: 23px;
   letter-spacing: 1px;
   cursor: pointer;
   opacity: .8;
-  margin-top: 60px;
-  font-family: helvetica;
-/*  background: #005098;
-  border: none;
-  border-radius: 10px;
-  color: #fff;
-  padding: 5px 10px;
-  font-size: 25px;
-  letter-spacing: 4px;
-  font-style: italic;
-  cursor: pointer;
-  opacity: .8;
-  margin-top: 60px;*/
+  margin-top: 30px;
+  background: none;
+  border: 2px solid #005098;
+  color: #005098;
+  font-family: "Gloria Hallelujah", cursive;
 }
 
 button:hover:enabled {
   opacity: 1;
 }
+button:focus {
+  outline: none;
+}
 
 .input-wrapper input[type="text"] {
+  display: block;
   width: 100%;
   height: 100%;
   border: none;
-  border-bottom: 1px dotted #888;
+  /*border-bottom: 1px dotted #888;*/
+  border-bottom: 1px solid #888;
   transition: border-color .3s;
   -webkit-transition: border-color .3s;
 }
@@ -209,116 +394,7 @@ button:hover:enabled {
   margin: 20px 0;
 }
 
-body {
-  margin: 0;
-  font-size: 100%;
-}
-
-body * {
-  box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
-  font-weight: normal;
-}
-
-.wf-loading {
-/* styles to use when web fonts are loading */
-}
-.wf-loading .kj-container {
-  opacity: 0;
-}
- 
-.wf-active {
-/* styles to use when web fonts are active */
-}
- 
-.wf-inactive {
-/* styles to use when web fonts are inactive */
-}
-
-/*.minion-pro {
-  font-family: minion-pro, serif;
-}
-
-.adorn-smooth-pomander {
-  font-family: adorn-smooth-pomander, sans-serif;
-}*/
-
-.main-container {
-  text-align: center;
-  padding: 15px;
-  /*padding-top: 100px;*/
-  padding-bottom: 100px;
-  font-family: 'Gloria Hallelujah', cursive;
-}
-
-p {
-  font-size: 20px;
-  /*color: #7d7d7d;*/
-  color: #005098;
-}
-
-#countdown {
-  font-size: 200px;
-  /*color: #E91E63;*/
-  color: rgb(224,234,243);
-}
-
-img {
-  width: 100%;
-  max-width: 600px;
-}
-
-.rotate {
-  -webkit-transform: rotate(-8deg);
-          transform: rotate(-8deg);
-}
-
-.kj-container {
-  font-size: 4em;
-  position: relative;
-  pointer-events: none;
-}
-
-.kj {
-  font-family: adorn-smooth-pomander, sans-serif;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  position: relative;
-  pointer-events: none;
-}
-
-@media only screen and (max-width: 600px) {
-  .kj-container { font-size: 2.4em; }
-}
-
-.kj h1 {
-  color: #005098;
-  position: relative;
-  z-index: 10;
-}
-
-.kj-container span {
-  font-family: adorn-smooth-pomander, sans-serif;
-  color: #e0eaf3;
-  position: absolute;
-  font-size: 6.4em;
-  top: -.29em;
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  right: 0;
-}
-
-.kj .spacer {}
-
 #success {
-  display: none;
+  color: #005098;
+  margin-top: 15px;
 }
-
