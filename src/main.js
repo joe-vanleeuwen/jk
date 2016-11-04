@@ -4,6 +4,7 @@ var second = 1000
 var minute = second * 60
 var hour = minute * 60
 var day = hour * 24 // 86400000 - milliseconds per day
+var daysElement = "days"//"countdown"
 
 var countdown = function () {
   var now = new Date()
@@ -22,7 +23,7 @@ var countdown = function () {
 }
 
 var updateCountDown = function () {
-  document.getElementById("countdown").innerHTML = countdown()
+  document.getElementById(daysElement).innerHTML = countdown()
 }
 
 var monitorCountDown = function () {
@@ -41,17 +42,3 @@ var monitorCountDown = function () {
 
 updateCountDown()
 monitorCountDown()
-
-
-// $.ajax({
-//   url: 'https://sheetsu.com/apis/v1.0/0323662044dd',
-//   data: data,
-//   dataType: 'json',
-//   type: 'POST',
-//   success: function(data) {
-//     console.log("succeeded");
-//   },
-//   error: function(data) {
-//     console.log("error: ", data);
-//   }
-// });

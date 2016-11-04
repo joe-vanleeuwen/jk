@@ -1,7 +1,5 @@
 form {
   font-family: minion-pro, serif;
-  max-width: 500px;
-  margin: 0 auto;
 }
 
 label {
@@ -13,33 +11,29 @@ input, button {
   font-family: minion-pro, serif;
 }
 
+input {
+  background: transparent;
+}
+
 button {
-  background: #005098;
-  border: none;
   border-radius: 10px;
-  color: #fff;
-  padding: 12px 18px;
+  padding: 0px 25px;
   font-size: 23px;
   letter-spacing: 1px;
   cursor: pointer;
   opacity: .8;
-  margin-top: 60px;
-  font-family: helvetica;
-/*  background: #005098;
-  border: none;
-  border-radius: 10px;
-  color: #fff;
-  padding: 5px 10px;
-  font-size: 25px;
-  letter-spacing: 4px;
-  font-style: italic;
-  cursor: pointer;
-  opacity: .8;
-  margin-top: 60px;*/
+  margin-top: 30px;
+  background: none;
+  border: 2px solid #005098;
+  color: #005098;
+  font-family: "Gloria Hallelujah", cursive;
 }
 
 button:hover:enabled {
   opacity: 1;
+}
+button:focus {
+  outline: none;
 }
 
 .input-wrapper input[type="text"] {
@@ -192,3 +186,7 @@ button:hover:enabled {
   margin: 20px 0;
 }
 
+#success {
+  color: #005098;
+  margin-top: 15px;
+}

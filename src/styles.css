@@ -1,6 +1,12 @@
 body {
   margin: 0;
   font-size: 100%;
+  /*background: #e0eaf3;*/
+  background: url(/src/assets/jk-photo.jpg) no-repeat center 20% fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 body * {
@@ -36,8 +42,15 @@ body * {
   text-align: center;
   padding: 15px;
   /*padding-top: 100px;*/
-  padding-bottom: 100px;
+  /*padding-bottom: 100px;*/
   font-family: 'Gloria Hallelujah', cursive;
+  background: #e0eaf3;
+  opacity: .9;
+}
+
+.container {
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 p {
@@ -88,7 +101,8 @@ img {
 
 .kj-container span {
   font-family: adorn-smooth-pomander, sans-serif;
-  color: #e0eaf3;
+  /*color: #e0eaf3;*/
+  color: #fff;
   position: absolute;
   font-size: 6.4em;
   top: -.29em;
@@ -104,3 +118,57 @@ img {
   display: none;
 }
 
+.registry {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.registry ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.registry ul li {
+  width: 150px;
+}
+
+.registry ul li.amazon {
+  max-width: 150px;
+  width: initial;
+}
+
+@media only screen and (max-width: 400px) {
+/*  .registry ul li {
+    min-width: 150px;
+  }*/
+  .registry ul {
+    flex-direction: column;
+  }
+  .registry ul li {
+    margin: 10px 0;
+  }
+}
+
+.amazon {
+  float: left;
+  text-indent: -500px;
+  background-position: -10px -51px;
+  width: 97px;
+  height: 29px;
+  background-image: url(https://images-na.ssl-images-amazon.com/images/G/01/gno/sprites/global-sprite_bluebeacon-32-v1._CB295592523_.png);
+  background-repeat: repeat-x;
+}
+
+.under-construction {
+  /*margin-top: 50px;*/
+}
+.under-construction p {
+  font-size: 14px;
+  line-height: 16px;
+}
