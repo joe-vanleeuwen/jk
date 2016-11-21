@@ -33,7 +33,7 @@ $(document).ready(function () {
     var data = {
       name: $("#name").val(),
       guest: $("#guest-name").val(),
-      attending: $("input[name=attending]:checked").val() ? "yes" : "no",
+      attending: $("input[name=attending]:checked").val() == "yes" ? "yes" : "no",
       respond_date: new Date()
     }
 
